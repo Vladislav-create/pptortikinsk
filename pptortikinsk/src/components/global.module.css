@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'DM Serif Display', serif;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    }
+
+.center {
+    padding-left: calc(50% - 600px);
+    padding-right: calc(50% - 600px);
+}
