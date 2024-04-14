@@ -1,3 +1,94 @@
 .wrapper {
     border: 1px solid red;
 }
+.header {
+    margin-top: 50px;
+    margin-bottom: 1000px;
+}
+.header__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__top__left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+.header__top__left__nav {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-family: Manrope;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+}
+.header__top__right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__top__right__privateOffice {
+    color: rgb(85, 183, 76);
+    font-family: Manrope;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0%;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px
+    ;
+}
+/* ***************************************************************** */
+
+.header__middle {
+    margin-top: 37px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__middle__left_lable {
+    font-family: "PT Serif", serif;
+    font-size: 32px;
+    color: rgb(27, 49, 2);
+}
+
+.header__middle__centr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 98px;
+}
+.header__middle__centr__address__title {
+    color: rgb(137, 137, 137);
+    font-family: Manrope;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+}
+.header__middle__centr__contacts__title {
+    color: rgb(137, 137, 137);
+    font-family: Manrope;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+}
+.header__middle__centr__contacts__phone {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+/* ************************************************************** */
+
+.header__middle__right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}

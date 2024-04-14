@@ -43,7 +43,7 @@ root.render(
   <Provider store={store}>
     <div className={styles.center}>
       <HeaderComponent />
-      <Info />
+      {/* <Info />
       <TestComp
         props1={1}
         props2={"Vlad"}
@@ -60,7 +60,7 @@ root.render(
       <TestSetComp />
       <UserData />
       <TestRouterMain />
-      <ProfilePage />
+      <ProfilePage /> */}
     </div>
   </Provider>
 );
