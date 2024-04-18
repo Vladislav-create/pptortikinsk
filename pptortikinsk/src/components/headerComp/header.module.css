@@ -1,5 +1,9 @@
-.wrapper {
-    border: 1px solid red;
+:root {
+    --main-bg: #ffd5cd;
+    --main-text: #efbbcf;
+    --decor-text: #8675a9;
+    --color-btn: #c3aed6;
+    --color-hover-btn:#8675a9;
 }
 .header {
     margin-top: 50px;
@@ -18,7 +22,7 @@
 }
 .header__top__left__nav {
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: var(--decor-text);
     font-family: Manrope;
     font-size: 14px;
     font-weight: 400;
@@ -28,20 +32,23 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    min-width: max-content;
 }
 .header__top__right__privateOffice {
-    color: rgb(85, 183, 76);
+    color: var(--decor-text);
     font-family: Manrope;
     font-size: 16px;
     font-weight: 500;
     line-height: 22px;
     letter-spacing: 0%;
-    text-decoration: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px
-    ;
+    min-width: max-content;
+}
+.header__top__right__privateOffice__icon {
+    max-width: 20px;
+    min-height: 15px;
+    margin-left: 10px;
+    fill: var(--decor-text);
+    cursor: pointer;
 }
 /* ***************************************************************** */
 
@@ -54,7 +61,7 @@
 .header__middle__left_lable {
     font-family: "PT Serif", serif;
     font-size: 32px;
-    color: rgb(27, 49, 2);
+    color: var(--main-text);
 }
 
 .header__middle__centr {
@@ -64,18 +71,20 @@
     gap: 98px;
 }
 .header__middle__centr__address__title {
-    color: rgb(137, 137, 137);
+    color: var(--decor-text);
     font-family: Manrope;
     font-size: 14px;
     font-weight: 400;
     line-height: 19px;
+    margin-bottom: 5px;
 }
 .header__middle__centr__contacts__title {
-    color: rgb(137, 137, 137);
+    color: var(--decor-text);
     font-family: Manrope;
     font-size: 14px;
     font-weight: 400;
     line-height: 19px;
+    margin-bottom: 5px;
 }
 .header__middle__centr__contacts__phone {
     display: flex;
@@ -83,7 +92,14 @@
     align-items: center;
     gap: 10px;
 }
-
+.header__middle__centr__contacts__phone__box{
+    display: flex;
+    justify-content: space-between;
+    min-width: 143px;
+}
+.header__middle__centr__contacts__phone__icon{
+    max-width: 10px;
+}
 /* ************************************************************** */
 
 .header__middle__right {
@@ -91,4 +107,28 @@
     justify-content: space-between;
     align-items: center;
     gap: 20px;
+}
+
+/* *************************************************************** */
+
+.header__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.header__bottom__btn {
+    border: none;
+    padding: 10px 45px;
+    cursor: pointer;
+    font-family: "PT Serif", serif;
+    font-size: 24px;
+    color: var(--decor-text);
+    background-color: var(--main-bg);
+    transition: 0.3s;
+    border-radius: 5px;
+}
+.header__bottom__btn:hover {
+    background-color: var(--main-text);
 }
