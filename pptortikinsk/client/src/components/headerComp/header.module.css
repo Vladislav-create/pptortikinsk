@@ -2,12 +2,13 @@
     --main-bg: #ffd5cd;
     --main-text: #efbbcf;
     --decor-text: #8675a9;
+    --decor-text-hover: #4e26a0;
     --color-btn: #c3aed6;
     --color-hover-btn:#8675a9;
 }
 .header {
     margin-top: 50px;
-    margin-bottom: 1000px;
+    margin-bottom: 70px;
 }
 .header__top {
     display: flex;
@@ -28,11 +29,17 @@
     font-weight: 400;
     line-height: 19px;
 }
+.header__top__left__nav:hover {
+    color: var(--decor-text-hover);
+}
 .header__top__right {
     display: flex;
     justify-content: space-between;
     align-items: center;
     min-width: max-content;
+}
+.header__top__right__privateOffice:hover {
+    color: var(--decor-text-hover);
 }
 .header__top__right__privateOffice {
     color: var(--decor-text);
@@ -49,6 +56,9 @@
     margin-left: 10px;
     fill: var(--decor-text);
     cursor: pointer;
+}
+.header__top__right__privateOffice__icon:hover {
+    fill: var(--decor-text-hover);
 }
 /* ***************************************************************** */
 
@@ -68,7 +78,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 98px;
+    gap: 170px;
 }
 .header__middle__centr__address__title {
     color: var(--decor-text);
@@ -106,9 +116,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 20px;
+    gap: 30px;
 }
-
+.header__middle__right__icon {
+    min-width: 20px;
+    fill: var(--decor-text);
+}
+.header__middle__right__icon:hover {
+    fill: var(--decor-text-hover);
+}
 /* *************************************************************** */
 
 .header__bottom {
