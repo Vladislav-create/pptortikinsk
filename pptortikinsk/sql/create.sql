@@ -56,6 +56,7 @@ USE `pptortikinsk`;
 INSERT INTO `
 pptortikinsk`.`users
 `
+
 (`idusers`, `userFirstName`, `userLastName`, `userPhone`, `userEmale`) VALUES
 ('1', 'admin', 'admin', '89996662233', 'qwerty@mail.ru');
 
