@@ -6,7 +6,7 @@ import { nanoid } from 'nanoid'
 export function CostCalculationComponent() {
     
     function getAllDataFromDbUsers () {
-        fetch('/api/')
+        fetch('/api/bricks')
         .then(response => response.json())
         .then(data => { console.log(data) }
         )
