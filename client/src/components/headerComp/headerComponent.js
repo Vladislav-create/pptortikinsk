@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import styles from "./header.module.css"
 // import user_icon from "../../pictures/pictures-header/user-icon.png"
 // import telephone from "../../pictures/pictures-header/telephone.png"
@@ -14,17 +15,16 @@ export function HeaderComponent() {
                     <span><a className = {styles.header__top__left__nav} href="#">Контакты</a></span>
                     <span><a className = {styles.header__top__left__nav} href="#">О нас</a></span>
                     <span><a className = {styles.header__top__left__nav} href="#">Доставка</a></span>
-                    {/* <a href="#">Политика безопасности</a>
-                    <a href="#">Условия соглашения</a> */}
                 </div>
+
                 <a className = {styles.header__top__right}>
-                    <a className = {styles.header__top__right__privateOffice} href="#">Личный кабинет</a>
+                    <a className = {styles.header__top__right__privateOffice} href="http://localhost:3000/">Личный кабинет</a>
                     <svg className = {styles.header__top__right__privateOffice__icon} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/></svg>
                 </a>
             </div>
             <div className = {styles.header__middle}>
                 <section className = {styles.header__middle__left}>
-                    <a href = "#"><h1 className = {styles.header__middle__left_lable}>ПП ТОРТИКИ НСК</h1></a>
+                    <a href = "http://localhost:3000/"><h1 className = {styles.header__middle__left_lable}>ПП ТОРТИКИ НСК</h1></a>
                 </section>
 
 
