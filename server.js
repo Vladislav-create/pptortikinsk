@@ -1,5 +1,6 @@
-const mysql = require("mysql2")
+const mysql = require("mysql")
 const express = require("express");
+const path = require("path");
 
 const connectionDb = mysql.createConnection({
   host: process.env.DB_HOST || "localhost",
@@ -45,6 +46,11 @@ app.post("/api/bricks", function (req, res) {
   connectionDb.query(sql, user, function (err, result) {});
   console.log(req.body.id);
 });
+
+app.use(express.static(path.join(__dirname, "client/build")));
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "client/build", "index.html"));
+})
 
 const port = process.env.PORT || 5000;
 app.listen(port, () => {
