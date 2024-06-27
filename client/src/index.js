@@ -10,6 +10,7 @@ import { Provider } from "react-redux";
 import { store } from "./store";
 // import { ProfilePage } from "./components/testComp/testProfileComp";
 import { HeaderComponent } from "./components/headerComp/headerComponent"
+import { MainImageLableComp } from "./components/mainImageLable/mainImageLableComp"
 import {CostCalculationComponent} from "./components/costCalculationComp/costCalculationComponent"
 
 // const Info = () => {
@@ -42,8 +43,9 @@ import {CostCalculationComponent} from "./components/costCalculationComp/costCal
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Provider store={store}>
-    <div className={styles.center}>
+    <div>
       <HeaderComponent />
+      <MainImageLableComp />
       <CostCalculationComponent />
       {/* <Info />
       <TestComp

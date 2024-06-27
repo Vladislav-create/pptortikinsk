@@ -1,150 +1,166 @@
 :root {
     --main-bg: #ffd5cd;
-    --main-text: #efbbcf;
+    --main-text: #3CA1D9;
     --decor-text: #8675a9;
     --decor-text-hover: #4e26a0;
     --color-btn: #c3aed6;
     --color-hover-btn:#8675a9;
 }
+.center {
+    padding-left: calc(50% - 600px);
+    padding-right: calc(50% - 600px);
+}
 .header {
-    margin-top: 50px;
     margin-bottom: 70px;
 }
 .header__top {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: center;
+    background-color: #D4E9F9;
+    min-height: 50px;
 }
-.header__top__left {
+.header__top__contentBox {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    gap: 50px;
+    
 }
-.header__top__left__nav {
-    text-decoration: none;
-    color: var(--decor-text);
-    font-family: Manrope;
-    font-size: 14px;
+.header__top__contentText {
+    font-family: Proxima Nova;
+    font-size: 18px;
     font-weight: 400;
-    line-height: 19px;
-}
-.header__top__left__nav:hover {
-    color: var(--decor-text-hover);
-}
-.header__top__right {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    min-width: max-content;
-}
-.header__top__right__privateOffice:hover {
-    color: var(--decor-text-hover);
-}
-.header__top__right__privateOffice {
-    color: var(--decor-text);
-    font-family: Manrope;
-    font-size: 16px;
-    font-weight: 500;
     line-height: 22px;
-    letter-spacing: 0%;
-    min-width: max-content;
-}
-.header__top__right__privateOffice__icon {
-    max-width: 20px;
-    min-height: 15px;
-    margin-left: 10px;
-    fill: var(--decor-text);
-    cursor: pointer;
-}
-.header__top__right__privateOffice__icon:hover {
-    fill: var(--decor-text-hover);
+    letter-spacing: 2%;
+    text-align: center;
+    max-width: 490px;
 }
 /* ***************************************************************** */
 
 .header__middle {
-    margin-top: 37px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #F7EBE5;
+    min-height: 60px;
 }
-.header__middle__left_lable {
-    font-family: "PT Serif", serif;
-    font-size: 32px;
-    color: var(--main-text);
+.header__middle__lableBox {
+    padding: 50px 20px;
+    text-align: center;
 }
-
-.header__middle__centr {
+.header__middle__lableText{
+    font-family: 'Righteous', cursive;
+    position: relative;
+    color: #3CA1D9; 
+    display: inline-block;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    font-size: 3em;
+    padding: 11px 60px;
+    margin: 0; 
+    line-height: 1;
+}
+.header__middle__lableText::before, .header__middle__lableText::after {
+    content: ""; 
+    position: absolute;
+    top: 0;
+    width: 30px;
+    height: 100%;
+    border-left: 2px solid;
+    border-right: 2px solid;
+    background: repeating-linear-gradient(180deg, transparent, transparent 2px, #3CA1D9 2px, #3CA1D9 4px);
+}
+.header__middle__lableText::before{
+    left: 0;
+}
+.header__middle__lableText::after{
+    right: 0;
+}
+@media (max-width: 420px) {
+    .header__middle__lableText {font-size: 2em;}
+  }
+.header__middle__lableCityBox {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 170px;
-}
-.header__middle__centr__address__title {
-    color: var(--decor-text);
-    font-family: Manrope;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 19px;
-    margin-bottom: 5px;
-}
-.header__middle__centr__contacts__title {
-    color: var(--decor-text);
-    font-family: Manrope;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 19px;
-    margin-bottom: 5px;
-}
-.header__middle__centr__contacts__phone {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     gap: 10px;
 }
-.header__middle__centr__contacts__phone__box{
+.header__middle__lableCity {
     display: flex;
-    justify-content: space-between;
-    min-width: 143px;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
 }
-.header__middle__centr__contacts__phone__icon{
-    max-width: 10px;
+.header__middle__lableCityText{
+    color: rgba(0, 0, 0, 0.88);
+    font-family: Proxima Nova;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0%;
+    text-align: left;
 }
-/* ************************************************************** */
-
-.header__middle__right {
+.header__middle__lableSocial {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     gap: 30px;
 }
-.header__middle__right__icon {
-    min-width: 20px;
-    fill: var(--decor-text);
-}
-.header__middle__right__icon:hover {
-    fill: var(--decor-text-hover);
+.headerSocialIcon {
+    cursor: pointer;
 }
 /* *************************************************************** */
-
-.header__bottom {
+.header__nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 40px;
+    min-height: 40px;
+    position: relative;
 }
-
-.header__bottom__btn {
-    border: none;
-    padding: 10px 45px;
+.header__nav__titleBox{
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+    margin-left: 130px;
+}
+.header__nav__title {
+    color: rgb(43, 20, 20);
+    font-family: Proxima Nova;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0%;
+    text-transform: uppercase;
     cursor: pointer;
-    font-family: "PT Serif", serif;
-    font-size: 24px;
-    color: var(--decor-text);
-    background-color: var(--main-bg);
-    transition: 0.3s;
-    border-radius: 5px;
+    list-style: none;
 }
-.header__bottom__btn:hover {
-    background-color: var(--main-text);
+.header__nav__title:hover {
+    color: var(--main-text);
+    cursor: pointer;
+}
+.header__nav__subtitle{
+    margin-top: 10px;
+    cursor: pointer;
+    color: rgb(43, 20, 20);
+    font-family: Proxima Nova;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0%;
+    text-align: left;
+    text-transform: uppercase;
+}
+.header__nav__subtitle:hover{
+    color: var(--main-text);
+}
+.header__nav__listOfCake{
+    position: absolute;
+
+    transition: all 0.4s ease-in-out;
+    max-height: 20px;
+    overflow: hidden;
+
+    top: 0;
+    margin-top: 10px;
+}
+.header__nav__listOfCake[open] {
+    max-height: 140px;
 }
