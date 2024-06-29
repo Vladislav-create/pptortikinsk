@@ -10,7 +10,7 @@ import { Provider } from "react-redux";
 import { store } from "./store";
 // import { ProfilePage } from "./components/testComp/testProfileComp";
 import { HeaderComponent } from "./components/headerComp/headerComponent"
-import { MainImageLableComp } from "./components/mainImageLable/mainImageLableComp"
+import { MainContentComp } from "./components/mainContent/mainContentComp"
 import {CostCalculationComponent} from "./components/costCalculationComp/costCalculationComponent"
 
 // const Info = () => {
@@ -45,7 +45,7 @@ root.render(
   <Provider store={store}>
     <div>
       <HeaderComponent />
-      <MainImageLableComp />
+      <MainContentComp />
       <CostCalculationComponent />
       {/* <Info />
       <TestComp

@@ -1,0 +1,27 @@
+:root {
+    --main-bg: #ffd5cd;
+    --main-text: #3CA1D9;
+    --decor-text: #8675a9;
+    --decor-text-hover: #4e26a0;
+    --color-btn: #c3aed6;
+    --color-hover-btn:#8675a9;
+}
+.center {
+    padding-left: calc(50% - 600px);
+    padding-right: calc(50% - 600px);
+}
+.mainContentBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+.mainContentHeader {
+    color: rgb(41, 41, 41);
+    font-family: Montserrat;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 37px;
+    letter-spacing: 0%;
+    text-align: left;
+}
