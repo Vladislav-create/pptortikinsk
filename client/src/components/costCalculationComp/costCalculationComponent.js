@@ -28,8 +28,7 @@ export function CostCalculationComponent() {
     useEffect(getAllDataFromDbUsers, []);
 
     return (
-    
-        <div>
+        <div className={styles.contentBox}>
             <h1>Рассчитать стоимость торта</h1>
             <br></br>
             <br></br>
