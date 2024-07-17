@@ -1,24 +1,45 @@
 /* eslint-disable jsx-a11y/alt-text */
 import styles from './mainContent.module.css'
-// import testImg from '../../pictures/products/MousseCake/Coffee'
+import { useEffect, useState } from "react"
 
 export function MainContentComp() {
-    // let test = '../../pictures/products/MousseCake/Coffee'
-    const protucts = [
-        {productId: 1, productType: '', productName: '', productPrice: 2500, productCalories: '', productImg: ''},
-        {productId: 1, productType: '', productName: '', productPrice: 2500, productCalories: '', productImg: ''},
-        {productId: 1, productType: '', productName: '', productPrice: 2500, productCalories: '', productImg: ''}]
+
+    let urlImgProduct = './img/products';
+
+    function getAllProductsFromDb () {
+        fetch('/products')
+        .then(response => response.json())
+        .then(data => setProducts(data))
+    }
+
+    const [products, setProducts] = useState([]);
+    useEffect(()=>{
+        getAllProductsFromDb()
+    }, [])
+
+    
     return (
+        
         <section className={`${styles.mainContentBox} ${styles.center}`}>
             <h1 className={styles.mainContentHeader}>Популярные вкусняшки</h1>
+            <p>{console.log(products)}</p>
             <section className={styles.cartsBox}>
-                <article className={styles.productCart}>
-                    <img className={styles.productImg} src={process.env.IMG_URL + '/coffeeMousse1.png'}/>
-                    <div className={styles.productCartInfo}>
-
+                {products.map(item => (
+                    <div className={styles.productCart}>
+                        <img className={styles.productImg} key={item.productId} src={urlImgProduct + item.productImg}/> 
+                         <p>{console.log(urlImgProduct + item.productImg)}</p>
+                         <p>{item.productName}</p>
+                         <article className={styles.productCart}>
+                            <div className={styles.productCartInfo}>
+                            <p>Описание товара</p>
+                            </div>
+                        </article>
+                        <div>
+                            <p>Цена 1000 руб.</p>
+                            <button>Хочу это</button>
+                        </div>
                     </div>
-                </article>
-
+                ))}
             </section>
         </section>
     )

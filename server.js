@@ -27,7 +27,19 @@ app.get("/api/bricks", (req, res) => {
     if (err) {
       res.status(500);
     } else {
-      console.log("Подключение к БД прошло, данные получены");
+      console.log("Подключение к БД с пользователями прошло успешно, данные получены");
+      res.send(data);
+    }
+  });
+});
+
+app.get("/products", (req, res) => {
+  console.log("All products");
+  connectionDb.query("SELECT * FROM pptortikinsk.products", (err, data) => {
+    if (err) {
+      res.status(500);
+    } else {
+      console.log("Подключение к БД с продуктами прошло успешно, данные получены");
       res.send(data);
     }
   });
