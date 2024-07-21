@@ -33,11 +33,11 @@
     justify-content: space-between;
     gap: 50px;
 }
-.productCart {
-    max-width: 370px;
-}
+/* .productCart {
+    
+} */
 .productImg {
-    max-width: 370px;
-    height: 300px;
+    
+    
     border-radius: 5px 5px 0px 0px;
 }
