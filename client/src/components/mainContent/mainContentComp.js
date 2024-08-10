@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 import styles from './mainContent.module.css'
 import { useEffect, useState } from "react"
+import svgCatch from "../../pictures/pictures-header/Catch.svg";
 
 export function MainContentComp() {
 
@@ -28,15 +29,16 @@ export function MainContentComp() {
                     <div className={styles.productCart}>
                         <img className={styles.productImg} key={item.productId} src={urlImgProduct + item.productImg}/> 
                          <p>{console.log(urlImgProduct + item.productImg)}</p>
-                         <p>{item.productName}</p>
-                         <article className={styles.productCart}>
+                         <p className={styles.productName}>{item.productName}</p>
+                         <article className={styles.test}>
                             <div className={styles.productCartInfo}>
-                            <p>Описание товара</p>
+                            <p className={styles.productCartInfoDiscription}>Описание товара</p>
+                            <hr className={styles.productCartSeparate}></hr>
                             </div>
                         </article>
-                        <div>
-                            <p>Цена 1000 руб.</p>
-                            <button>Хочу это</button>
+                        <div className={styles.productCartPriceBy}>
+                            <p className={styles.productCartPrice}>Цена 1000 руб.</p>
+                            <button className={styles.productCartBy}><img src={ svgCatch }></img></button>
                         </div>
                     </div>
                 ))}

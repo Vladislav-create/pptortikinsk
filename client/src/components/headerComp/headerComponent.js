@@ -6,6 +6,8 @@ import svgPhone from "../../pictures/pictures-header/phone.svg";
 import svgInsta from "../../pictures/pictures-header/insta.svg";
 import svgVK from "../../pictures/pictures-header/vk.svg";
 import svgTelegram from "../../pictures/pictures-header/telegramm.svg";
+import svgMenu from "../../pictures/pictures-header/Menu.svg";
+import svgCatch from "../../pictures/pictures-header/Catch.svg";
 const React = require("react");
 
 
@@ -22,7 +24,11 @@ export function HeaderComponent() {
 
       </div>
       <div className={`${styles.header__middle} ${styles.center}`}>
-        
+          
+          <div className={styles.header__middle__menu}>
+            <img src={ svgMenu }></img>
+          </div>
+          
           <div className={styles.header__middle__lableCityBox}>
             <div className={styles.header__middle__lableCity}>
               <img src={svgMap} />
@@ -37,9 +43,15 @@ export function HeaderComponent() {
               </p>
             </div>
           </div>
+
           <div className={styles.header__middle__lableBox}>
             <h1 className={styles.header__middle__lableText}>pp_tortiki_nsk</h1>
           </div>
+
+          <div className={styles.header__middle__catch}>
+            <img src={ svgCatch }></img>
+          </div>
+
           <div className={styles.header__middle__lableSocial}>
             <img className={styles.headerSocialIcon} src={svgInsta} />
             <img className={styles.headerSocialIcon} src={svgVK} />
