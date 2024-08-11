@@ -28,17 +28,19 @@ export function MainContentComp() {
                 {products.map(item => (
                     <div className={styles.productCart}>
                         <img className={styles.productImg} key={item.productId} src={urlImgProduct + item.productImg}/> 
-                         <p>{console.log(urlImgProduct + item.productImg)}</p>
-                         <p className={styles.productName}>{item.productName}</p>
+                         <div>
+                            <p className={styles.productName}>{item.productName}</p>
+                         </div>
+                        
                          <article className={styles.test}>
                             <div className={styles.productCartInfo}>
-                            <p className={styles.productCartInfoDiscription}>Описание товара</p>
+                            <p className={styles.productCartInfoDiscription}>{item.productCalories}</p>
                             <hr className={styles.productCartSeparate}></hr>
                             </div>
                         </article>
                         <div className={styles.productCartPriceBy}>
-                            <p className={styles.productCartPrice}>Цена 1000 руб.</p>
-                            <button className={styles.productCartBy}><img src={ svgCatch }></img></button>
+                            <p className={styles.productCartPrice}>{item.productPrice}</p>
+                            <button className={styles.productCartBy}><img src={ svgCatch } className={styles.productBtnBy} ></img></button>
                         </div>
                     </div>
                 ))}

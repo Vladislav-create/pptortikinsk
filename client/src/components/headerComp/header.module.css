@@ -141,6 +141,7 @@
     align-items: center;
     min-height: 40px;
     position: relative;
+    background: rgb(247, 247, 247);
 }
 .header__nav__titleBox{
     display: flex;

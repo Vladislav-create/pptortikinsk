@@ -15,8 +15,11 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin-top: 40px;
+    background: rgb(247, 247, 247);
 }
+/* .cartsBox{
+    background: rgb(247, 247, 247);
+} */
 .mainContentHeader {
     color: rgb(41, 41, 41);
     font-family: Montserrat;
@@ -26,25 +29,71 @@
     letter-spacing: 0%;
     text-align: left;
     margin-bottom: 42px;
+    margin-top: 36px;
 }
 .cartsBox {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 40px;
+    gap: 30px;
+}
+.productCart{
+    
+    border: 1px solid rgb(237, 237, 240);
+    border-radius: 5px;
+    background: rgb(255, 255, 255);
+}
+.productCart:hover{
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 .productImg {
     border-radius: 5px 5px 0px 0px;
+}
+.productName{
+    color: rgb(41, 41, 41);
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0%;
+    padding: 21px 22px 14px 21px;
+
+}
+.productCartInfoDiscription{
+    color: rgb(41, 41, 41);
+    font-family: Proxima Nova;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0%;
+    padding-left: 22px;
+    padding-right: 21px;
+    padding-bottom: 14px;
+}
+.productCartSeparate{
+    border: 1px solid rgb(237, 237, 240);
+}
+.productCartPrice{
+    color: rgb(231, 66, 106);
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0%;
 }
 .productCartPriceBy{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 11px;
+    padding: 14px 25px 10px 21px;
 }
 .productCartBy {
     border: none;
     cursor: pointer;
+    background-color: white;
+}
+.productBtnBy{
+    
 }
 
 @media (max-width: 420px) {
