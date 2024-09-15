@@ -11,7 +11,8 @@ import { store } from "./store";
 // import { ProfilePage } from "./components/testComp/testProfileComp";
 import { HeaderComponent } from "./components/headerComp/headerComponent"
 import { MainContentComp } from "./components/mainContent/mainContentComp"
-import {CostCalculationComponent} from "./components/costCalculationComp/costCalculationComponent"
+// import {CostCalculationComponent} from "./components/costCalculationComp/costCalculationComponent"
+import {FooterComponent} from './components/footerComp/footerComponent'
 
 // const Info = () => {
 //   const [count, setcount] = useState(0);
@@ -46,7 +47,8 @@ root.render(
     <div>
       <HeaderComponent />
       <MainContentComp />
-      <CostCalculationComponent />
+      <FooterComponent />
+      {/* <CostCalculationComponent /> */}
       {/* <Info />
       <TestComp
         props1={1}

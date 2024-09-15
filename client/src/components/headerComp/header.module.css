@@ -5,6 +5,9 @@
     --decor-text-hover: #4e26a0;
     --color-btn: #c3aed6;
     --color-hover-btn:#8675a9;
+    --text: #2B3044;
+    --line: #BBC1E1;
+    --line-active: #275EFE;
 }
 .center {
     padding-left: calc(50% - 600px);
@@ -152,17 +155,45 @@
 .header__nav__title {
     color: rgb(43, 20, 20);
     font-family: Proxima Nova;
-    font-size: 14px;
+    font-size: 11px;
     font-weight: 400;
     line-height: 17px;
     letter-spacing: 0%;
     text-transform: uppercase;
     cursor: pointer;
     list-style: none;
+    /* ****************** */
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+    margin: 0 var(--spacing, 0px);
+    transition: margin .25s;
 }
 .header__nav__title:hover {
     color: var(--main-text);
     cursor: pointer;
+}
+.header__nav__svg {
+    width: 76px;
+    height: 40px;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 7px) translateZ(0);
+    fill: none;
+    stroke: var(--stroke, var(--line));
+    stroke-linecap: round;
+    stroke-width: 2px;
+    stroke-dasharray: var(--offset, 69px) 278px;
+    stroke-dashoffset: 361px;
+    transition: stroke .25s ease var(--stroke-delay, 0s), stroke-dasharray .35s;
+}
+.header__nav__svg:hover {
+    --spacing: 4px;
+    --stroke: var(--line-active);
+    --stroke-delay: .1s;
+    --offset: 180px;
 }
 .header__nav__subtitle{
     margin-top: 10px;

@@ -18,7 +18,10 @@ export function MainContentComp() {
         getAllProductsFromDb()
     }, [])
 
-    
+    function getProductInfo (e)  {
+        console.log(e.target.value);
+    }
+
     return (
         
         <section className={`${styles.mainContentBox} ${styles.center}`}>
@@ -26,7 +29,7 @@ export function MainContentComp() {
             <p>{console.log(products)}</p>
             <section className={styles.cartsBox}>
                 {products.map(item => (
-                    <div className={styles.productCart}>
+                    <div className={styles.productCart}  onClick={getProductInfo}>
                         <img className={styles.productImg} key={item.productId} src={urlImgProduct + item.productImg}/> 
                          <div>
                             <p className={styles.productName}>{item.productName}</p>
@@ -34,7 +37,7 @@ export function MainContentComp() {
                         
                          <article className={styles.test}>
                             <div className={styles.productCartInfo}>
-                            <p className={styles.productCartInfoDiscription}>{item.productCalories}</p>
+                            <p className={styles.productCartInfoCalories}>{item.productCalories}</p>
                             <hr className={styles.productCartSeparate}></hr>
                             </div>
                         </article>
