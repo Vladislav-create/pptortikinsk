@@ -27,6 +27,17 @@ export function FooterComponent() {
                     </div>
                     <div className={styles.footer__left__bottom}>
                         <h1>копирайт</h1>
+                        <div className={styles.container}>
+                            <a className={styles.buttonDecor} href='#'>
+                                <span className={styles.buttonDecor__span}>Заказать</span>
+                            </a>
+                            <a className={styles.buttonDecor} href='#'>
+                                <span className={styles.buttonDecor__span}>Заказать</span>
+                            </a>
+                            <a className={styles.buttonDecor} href='#'>
+                                <span className={styles.buttonDecor__span}>Заказать</span>
+                            </a>
+                        </div>
                     </div>
                 </section>
                 <section className={styles.footer__middle}></section>
