@@ -1,3 +1,4 @@
+import {BrowserRouter, Routes, Route, Link, useParams} from "react-router-dom"
 import styles from "./components/global.module.css"
 import React from "react";
 import ReactDOM from "react-dom/client";
@@ -9,10 +10,10 @@ import { Provider } from "react-redux";
 // import { useState } from "react";
 import { store } from "./store";
 // import { ProfilePage } from "./components/testComp/testProfileComp";
-import { HeaderComponent } from "./components/headerComp/headerComponent"
-import { MainContentComp } from "./components/mainContent/mainContentComp"
+
 // import {CostCalculationComponent} from "./components/costCalculationComp/costCalculationComponent"
-import {FooterComponent} from './components/footerComp/footerComponent'
+import {MainPageComp} from './components/mainPageComp/mainPageComp'
+import {ProductOverviewComp} from './components/productOverviewComp/productOverviewComp'
 
 // const Info = () => {
 //   const [count, setcount] = useState(0);
@@ -45,9 +46,17 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Provider store={store}>
     <div>
-      <HeaderComponent />
-      <MainContentComp />
-      <FooterComponent />
+
+
+    <BrowserRouter>
+
+      
+        <Routes>
+          <Route path="/" element = {<MainPageComp />}/>
+          <Route path="/product" element = {<ProductOverviewComp />}/>
+        </Routes>
+
+    </BrowserRouter>  
       {/* <CostCalculationComponent /> */}
       {/* <Info />
       <TestComp

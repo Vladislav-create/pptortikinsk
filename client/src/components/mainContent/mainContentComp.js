@@ -2,6 +2,8 @@
 import styles from './mainContent.module.css'
 import { useEffect, useState } from "react"
 import svgCatch from "../../pictures/pictures-header/Catch.svg";
+import {BrowserRouter, Routes, Route, Link, useParams} from "react-router-dom"
+
 
 export function MainContentComp() {
 
@@ -18,9 +20,12 @@ export function MainContentComp() {
         getAllProductsFromDb()
     }, [])
 
-    function getProductInfo (e)  {
-        console.log(e.target.value);
+    
+
+    function getProductInfo (product)  {
+        console.log(product);
     }
+    
 
     return (
         
@@ -29,25 +34,29 @@ export function MainContentComp() {
             <p>{console.log(products)}</p>
             <section className={styles.cartsBox}>
                 {products.map(item => (
-                    <div className={styles.productCart}  onClick={getProductInfo}>
+                    <Link to = '/product'>
+                        <div className={styles.productCart}  onClick={()=>          {getProductInfo(item);}}>
                         <img className={styles.productImg} key={item.productId} src={urlImgProduct + item.productImg}/> 
-                         <div>
-                            <p className={styles.productName}>{item.productName}</p>
-                         </div>
-                        
-                         <article className={styles.test}>
-                            <div className={styles.productCartInfo}>
-                            <p className={styles.productCartInfoCalories}>{item.productCalories}</p>
-                            <hr className={styles.productCartSeparate}></hr>
+                            <div>
+                                <p className={styles.productName}>{item.productName}</p>
                             </div>
-                        </article>
-                        <div className={styles.productCartPriceBy}>
-                            <p className={styles.productCartPrice}>{item.productPrice}</p>
-                            <button className={styles.productCartBy}><img src={ svgCatch } className={styles.productBtnBy} ></img></button>
+                        
+                            <article className={styles.test}>
+                                <div className={styles.productCartInfo}>
+                                <p className={styles.productCartInfoCalories}>{item.productCalories}</p>
+                                <hr className={styles.productCartSeparate}></hr>
+                                </div>
+                            </article>
+
+                            <div className={styles.productCartPriceBy}>
+                                <p className={styles.productCartPrice}>{item.productPrice}</p>
+                                <button className={styles.productCartBy}><img src={ svgCatch } className={styles.productBtnBy} ></img></button>
+                            </div>
                         </div>
-                    </div>
+                    </Link>
                 ))}
             </section>
+            <Link to="/product">Контакты</Link>
         </section>
     )
 }
