@@ -23,7 +23,7 @@ export function MainContentComp() {
     
 
     function getProductInfo (product)  {
-        console.log(product);
+        // console.log(product);
     }
     
 
@@ -34,7 +34,7 @@ export function MainContentComp() {
             <p>{console.log(products)}</p>
             <section className={styles.cartsBox}>
                 {products.map(item => (
-                    <Link to = '/product'>
+                    <Link to = '/product' state={item}>
                         <div className={styles.productCart}  onClick={()=>          {getProductInfo(item);}}>
                         <img className={styles.productImg} key={item.productId} src={urlImgProduct + item.productImg}/> 
                             <div>
@@ -56,7 +56,6 @@ export function MainContentComp() {
                     </Link>
                 ))}
             </section>
-            <Link to="/product">Контакты</Link>
         </section>
     )
 }
