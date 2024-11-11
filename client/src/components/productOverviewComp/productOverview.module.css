@@ -1,0 +1,43 @@
+.center {
+    padding-left: calc(50% - 600px);
+    padding-right: calc(50% - 600px);
+}
+
+.productOverviewBox {
+    background: rgb(247, 247, 247);
+}
+
+.productTitleBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.productTitle {
+    color: rgb(41, 41, 41);
+    font-family: Montserrat;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 37px;
+    letter-spacing: 0%;
+    text-align: left;
+    margin-bottom: 42px;
+    margin-top: 36px;
+}
+
+.productViewBox {
+    background-color: bisque;
+    min-width: 150px;
+    min-height: 300px;
+    display: flex;
+    gap: 30px;
+}
+
+.productImgAll {
+    width: 200px;
+    cursor: pointer;
+}
+
+.productImgBig {
+    width: 600px;
+}
