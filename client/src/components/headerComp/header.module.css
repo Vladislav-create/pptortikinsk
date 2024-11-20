@@ -131,9 +131,38 @@
     align-items: center;
     gap: 30px;
 }
+
+.header__middle__lableSocial__box {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
 .headerSocialIcon {
     cursor: pointer;
 }
+
+.header__middle__registration__box {
+    & a{
+        color: rgba(0, 0, 0, 0.88);
+        font-family: Proxima Nova;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 17px;
+        letter-spacing: 0%;
+        text-align: left;
+        padding-left: 15px;
+    }
+}
+
+.header__middle__registration__login {
+
+}
+
+.header__middle__registration {
+
+}
+
 .header__middle__catch{
     display: none;
 }

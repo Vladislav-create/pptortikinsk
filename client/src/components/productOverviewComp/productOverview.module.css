@@ -26,18 +26,36 @@
 }
 
 .productViewBox {
-    background-color: bisque;
     min-width: 150px;
     min-height: 300px;
     display: flex;
+    justify-content: space-between;
     gap: 30px;
 }
 
+.productViewBox__left {
+    max-height: 700px;
+    min-width: 460px;
+    overflow-y:scroll;
+    border-radius: 10px;
+}
+
 .productImgAll {
-    width: 200px;
+    width: 460px;
     cursor: pointer;
+    border-radius: 10px;
+}
+
+.productImgAll:hover {
+    opacity: 80%;
+    transition: opacity 0.5s ease;
+}
+
+.productViewBox__right {
+
 }
 
 .productImgBig {
-    width: 600px;
+    width: 700px;
+    border-radius: 10px;
 }

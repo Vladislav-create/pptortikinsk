@@ -26,6 +26,7 @@ export function ProductOverviewComp() {
         <section >
             <HeaderComponent />
             <section className={`${styles.productOverviewBox} ${styles.center}`}>
+            <Link to="/">На главную</Link>
                 <div className={styles.productTitleBox}>
                     <h1 className={styles.productTitle}>{product.productName}</h1>
                 </div>
@@ -57,7 +58,6 @@ export function ProductOverviewComp() {
                 <h3>{product.productCalories}</h3>
                 <h3>{product.productDiscription}</h3>
                 <h3>{product.productImg}</h3>
-                <Link to="/">На главную</Link>
             </section>
 
         </section>

@@ -8,6 +8,7 @@ import svgVK from "../../pictures/pictures-header/vk.svg";
 import svgTelegram from "../../pictures/pictures-header/telegramm.svg";
 import svgMenu from "../../pictures/pictures-header/Menu.svg";
 import svgCatch from "../../pictures/pictures-header/Catch.svg";
+import {BrowserRouter, Routes, Route, Link, useLocation, useParams} from "react-router-dom"
 const React = require("react");
 
 
@@ -52,10 +53,18 @@ export function HeaderComponent() {
             <img src={ svgCatch }></img>
           </div>
 
-          <div className={styles.header__middle__lableSocial}>
-            <img className={styles.headerSocialIcon} src={svgInsta} />
-            <img className={styles.headerSocialIcon} src={svgVK} />
-            <img className={styles.headerSocialIcon} src={svgTelegram} />
+          <div className={styles.header__middle__lableSocial__box}>
+            <div className={styles.header__middle__lableSocial}>
+              <img className={styles.headerSocialIcon} src={svgInsta} />
+              <img className={styles.headerSocialIcon} src={svgVK} />
+              <img className={styles.headerSocialIcon} src={svgTelegram} />
+            </div>
+            <div className={styles.header__middle__registration__box}>
+              <Link to="/login" className={styles.header__middle__registration__login}     href="">Вход
+              </Link>
+              <Link to="/registration" className={styles.header__middle__registration} href="">Регистрация
+              </Link>
+            </div>
           </div>
         
       </div>
