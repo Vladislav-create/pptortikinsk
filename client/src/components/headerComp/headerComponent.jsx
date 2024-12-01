@@ -8,9 +8,9 @@ import svgVK from "../../pictures/pictures-header/vk.svg";
 import svgTelegram from "../../pictures/pictures-header/telegramm.svg";
 import svgMenu from "../../pictures/pictures-header/Menu.svg";
 import svgCatch from "../../pictures/pictures-header/Catch.svg";
-import {BrowserRouter, Routes, Route, Link, useLocation, useParams} from "react-router-dom"
-const React = require("react");
+import {Routes, Route, Link, useLocation, useParams, Outlet} from "react-router-dom"
 
+const React = require("react");
 
 export function HeaderComponent() {
     const [isOpen, setIsOpen] = React.useState(false)

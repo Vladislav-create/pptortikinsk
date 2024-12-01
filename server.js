@@ -59,6 +59,26 @@ app.post("/api/bricks", function (req, res) {
   console.log(req.body.id);
 });
 
+app.post("/login", function (req, res){
+  const userData = [req.body.login, req.body.password]
+  const sql = "SELECT * FROM pptortikinsk.users WHERE login = ? AND password = ?"
+
+  connectionDb.query(sql, userData, function (err, data) {
+
+    if(!data[0]) {
+      console.log("Неверный логин или пароль :(");
+      res.status(500)
+    } else if(err) {
+      console.log("ОШИБКА :(");
+      console.log(err);
+      res.status(500);
+    } else {
+      console.log("Авторизация прошла успешно!!!");
+      console.log(data);
+    }
+  });
+});
+
 app.use(express.static(path.join(__dirname, "client/build")));
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "client/build", "index.html"));

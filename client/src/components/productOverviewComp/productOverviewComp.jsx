@@ -24,7 +24,6 @@ export function ProductOverviewComp() {
 
     return (
         <section >
-            <HeaderComponent />
             <section className={`${styles.productOverviewBox} ${styles.center}`}>
             <Link to="/">На главную</Link>
                 <div className={styles.productTitleBox}>
