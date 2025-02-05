@@ -1,5 +1,9 @@
 .contentBox {
-    margin-top: 1250px;
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .form{
     display: flex;
@@ -13,4 +17,33 @@
 }
 .form__description {
     min-height: 100px;
+}
+.choiceBox {
+    display: flex;
+    gap: 60px;
+}
+.typesOfCakes {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+.typesOfCakes__radioButton {
+    display: flex;
+    gap: 15px;
+}
+.toppings {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+.toppings__radioButton {
+    display: flex;
+    gap: 15px;
+}
+.radioButton__imput {
+    width: 30px;
+    height: 30px;
+}
+.radioButton__lable {
+    font-size: 30px;
 }

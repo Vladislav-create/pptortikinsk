@@ -5,6 +5,7 @@ import { ProductOverviewComp } from "../productOverviewComp/productOverviewComp"
 import { LoginComp } from "../loginComp/loginComp"
 import { ProfileComp } from "../profile/profileComp";
 import { PrivateRoute } from "../privateRoute/privateRouteComp";
+import { CostCalculationComponent } from "../costCalculationComp/costCalculationComponent";
 import {BrowserRouter, Routes, Route, Link, useLocation, useParams, Outlet} from "react-router-dom"
 
 
@@ -19,6 +20,7 @@ export function MainPageComp() {
                     <Route path="/profile" element = {<ProfileComp/>}/>
                     <Route path="*" element = {<h1>404</h1>}/>
                 </Routes>
+                <CostCalculationComponent/>
             <FooterComponent/>
         </section>
     )
