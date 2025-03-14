@@ -64,17 +64,26 @@ app.post("/login", function (req, res){
   const sql = "SELECT * FROM pptortikinsk.users WHERE login = ? AND password = ?"
 
   connectionDb.query(sql, userData, function (err, data) {
-
+    
     if(!data[0]) {
-      console.log("Неверный логин или пароль :(");
       res.status(500)
+      res.send(
+        {
+          userAuth: false
+        }
+      )
+      console.log("Неверный логин или пароль :(");
     } else if(err) {
       console.log("ОШИБКА :(");
       console.log(err);
       res.status(500);
     } else {
+      res.send(
+        {
+          userAuth: true
+        }
+      )
       console.log("Авторизация прошла успешно!!!");
-      console.log(data);
     }
   });
 });

@@ -1,0 +1,1 @@
+export const TOGGLE_AUTH_USER = "@profile/toggle auth user"
