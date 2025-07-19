@@ -20,7 +20,9 @@ export function MainPageComp() {
                         <Route path="/" element = {<MainContentComp/>}/>
                         <Route path="/product" element = {<ProductOverviewComp/>}/>
                         <Route path="/login" element = {<LoginComp/>}/>
-                        <Route path="/profile" element = {<ProfileComp/>}/>
+                        <Route element={<PrivateRoute/>}>
+                            <Route path="/profile" element = {<ProfileComp/>}/>
+                        </Route>
                         <Route path="*" element = {<h1>404</h1>}/>
                     </Routes>
                     <CostCalculationComponent/>

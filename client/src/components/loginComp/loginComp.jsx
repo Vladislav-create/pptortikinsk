@@ -6,31 +6,31 @@ import { useSelector, useDispatch } from "react-redux";
 import { toggleAuthUser } from "../../store/profile";
 
 export function LoginComp () {
-    const [userAuth, setUserAuth] = useState(false);
+    // const [userAuth, setUserAuth] = useState(false);
     const [login, setLogin] = useState('')
     const [password, setPassword] = useState('')
     const profile = useSelector((state) => state.profile)
     const dispatch = useDispatch();
 
-    function toggle(data) {
-        if (data){
-            dispatch(toggleAuthUser())
-        }
-    }
+    // function toggle(data) {
+    //     if (data){
+    //         dispatch(toggleAuthUser())
+    //     }
+    // }
 
-    function checkUserAuth(userDataCl) {
-        fetch('/login', {
-            method: 'POST',
-            body: JSON.stringify(userDataCl),
-            headers: {
-                'Content-type': 'application/json'
-            }
+    // function checkUserAuth(userDataCl) {
+    //     fetch('/login', {
+    //         method: 'POST',
+    //         body: JSON.stringify(userDataCl),
+    //         headers: {
+    //             'Content-type': 'application/json'
+    //         }
         
-        })
-        .then(response => response.json())
-        .then(data => toggle(data.userAuth))
-        console.log(profile);
-    }
+    //     })
+    //     .then(response => response.json())
+    //     .then(data => data.userAuth ? dispatch(toggleAuthUser()) : console.log('Неверный логин или пароль'))
+    //     console.log(profile);
+    // }
 
     return (
         <div className={styles.test}>
@@ -49,13 +49,15 @@ export function LoginComp () {
                     {<h1>{password}</h1>}
                 </div>
             </form>
-                <button  onClick={() => (checkUserAuth(
+                <button  onClick={() => (dispatch(toggleAuthUser(
                     {
                         login: login,
                         password: password,
                     }
-                ))}>
-                    Войти
+                )))}>
+                    <Link to="/profile">
+                        Войти
+                    </Link>
                 </button>
                 <Link to="/">
                     На главную
