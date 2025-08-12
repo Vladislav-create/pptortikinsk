@@ -9,7 +9,7 @@ export function MainContentComp() {
 
     let urlImgProduct = './img/products';
 
-    function szse3ezsds3ezsez3szse3ezsds3ezdeezsdes3e3zsze33ezsds3ezszzdeszs3ezszs3ezdsddseszsdseszs3ezsdsdd3zsssdsds3ess3eesd3ss33dese3zsede3zszezsds3edsesdes3ds3sde3sds3ezddezde3szs3ezzezdseszs3edsedsedsese3ezdsesze3ezds3ezzezsds () {
+    function getAllProductsFromDb () {
         fetch('/products')
         .then(response => response.json())
         .then(data => setProducts(data))
