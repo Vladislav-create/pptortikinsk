@@ -46,7 +46,7 @@ export function HeaderComponent() {
           </div>
 
           <div className={styles.header__middle__lableBox}>
-            <h1 className={styles.header__middle__lableText}>ПЕРЕДЕЛАТЬ</h1>
+            <h1 className={styles.header__middle__lableText}>ПП Тортики в Новосибирске</h1>
           </div>
 
           <div className={styles.header__middle__catch}>
