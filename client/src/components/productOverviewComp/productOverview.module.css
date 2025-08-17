@@ -5,6 +5,9 @@
 
 .productOverviewBox {
     background: rgb(247, 247, 247);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .productTitleBox {
@@ -58,4 +61,20 @@
 .productImgBig {
     width: 700px;
     border-radius: 10px;
+}
+
+@media (max-width: 420px){
+    .productImgAll{
+        width: 330px;
+    }
+
+    .productViewBox__right{
+        display: none;
+    }
+
+    .productViewBox__left{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }

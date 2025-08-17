@@ -52,6 +52,7 @@
     text-align: center;
 }
 .header__middle__lableText {
+    font-family: Proxima Nova;
     font-size: 70px;
     font-weight: 500;
     color: #000;
