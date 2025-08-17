@@ -45,20 +45,20 @@ export function ProductOverviewComp() {
                     </div>
                     <div className={styles.productViewBox__right}>
                         <img 
-                            className={styles.productImgBig}
+                            
                             src={urlImgProduct + currentImg} 
                             alt="крупное фото товара" 
                         />
                     </div>
                 </div>
-                <h3>{product.productId}</h3>
-                <h3>{product.productType}</h3>
-                <h3>{product.productPrice}</h3>
-                <h3>{product.productCalories}</h3>
-                <h3>{product.productDiscription}</h3>
-                <h3>{product.productImg}</h3>
+                <div className={styles.productDiscribeBox}>
+                    <h3>{product.productId}</h3>
+                    <h3>{product.productType}</h3>
+                    <h3>{product.productPrice}</h3>
+                    <h3>{product.productCalories}</h3>
+                    <h3>{product.productDiscription}</h3>
+                </div>
             </section>
-
         </section>
     )
 }

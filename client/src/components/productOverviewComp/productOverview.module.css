@@ -77,4 +77,11 @@
         flex-direction: column;
         align-items: center;
     }
+    .productDiscribeBox{
+        max-width: 330px;
+    }
+
+    .productViewBox__left{
+        min-width: auto;
+    }
 }
