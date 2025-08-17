@@ -141,11 +141,11 @@
 }
 
 .header__middle__registration__login {
-
+    display: none;
 }
 
 .header__middle__registration {
-
+    display: none;
 }
 
 .header__middle__catch{
@@ -249,9 +249,10 @@
     }
 
     .header__middle__catch {
-        display: block;
+        /* display: block;
         margin-right: 25px;
-        cursor: pointer;
+        cursor: pointer; */
+        display: none;
     }
     .header__middle__lableSocial{
         display: none;

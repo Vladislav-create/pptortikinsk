@@ -107,6 +107,8 @@
         padding-left: 16px;
         padding-right: 16px;
         gap: 8px;
+        display: flex;
+        justify-content: space-around;
     }
     .productCart {
         max-width: 140px;
