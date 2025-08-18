@@ -102,7 +102,7 @@
     background: rgb(247, 247, 247);
 }
 
-@media (max-width: 420px) {
+@media (max-width: 460px) {
     .cartsBox{
         padding-left: 16px;
         padding-right: 16px;

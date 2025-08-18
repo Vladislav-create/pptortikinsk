@@ -63,7 +63,7 @@
     border-radius: 10px;
 }
 
-@media (max-width: 420px){
+@media (max-width: 460px){
     .productImgAll{
         width: 330px;
     }

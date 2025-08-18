@@ -239,7 +239,7 @@
     max-height: 140px;
 }
 
-@media (max-width: 420px) {
+@media (max-width: 460px) {
     .header__middle__menu {
         display: block;
         margin-left: 18px;
