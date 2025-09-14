@@ -25,7 +25,7 @@ export function MainPageComp() {
                         </Route>
                         <Route path="*" element = {<h1>404</h1>}/>
                     </Routes>
-                    {/* <CostCalculationComponent/> */}
+                    <CostCalculationComponent/>
                 <FooterComponent/>
             </Provider>
         </section>

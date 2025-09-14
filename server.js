@@ -45,18 +45,17 @@ app.get("/products", (req, res) => {
   });
 });
 
-app.post("/api/bricks", function (req, res) {
+app.post("/", function (req, res) {
   const user = [
     req.body.id,
-    "Ivan",
-    "Popov",
-    "89961235698",
-    "werwqrqwr@mail.ru",
+    req.body.elemName,
+    req.body.elemPhone,
+    req.body.elemDescription,
   ];
   const sql =
-    "INSERT INTO pptortikinsk.users (idusers, userFirstName, userLastName, userPhone, userEmale) VALUES (?, ?, ?, ?, ?)";
+    "INSERT INTO pptortikinsk.orders (idorders, orders_name, orders_phone, orders_description) VALUES (?, ?, ?, ?)";
   connectionDb.query(sql, user, function (err, result) {});
-  console.log(req.body.id);
+  console.log(req.body);
 });
 
 app.post("/login", function (req, res){

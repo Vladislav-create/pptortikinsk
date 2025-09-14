@@ -1,22 +1,48 @@
 .contentBox {
-    background-color: gray;
+    background-color: #F7EBE5;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+.title{
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
 .form{
     display: flex;
     flex-direction: column;
+    margin-bottom: 30px;
 }
 .form__name {
     max-width: 200px;
+    padding: 15px 50px 15px 10px;
+    border: solid 1px #D4E9F9;
+    border-radius: 5px;
 }
 .form__phone {
     max-width: 200px;
+    padding: 15px 50px 15px 10px;
+    border: solid 1px #D4E9F9;
+    border-radius: 5px;
 }
 .form__description {
     min-height: 100px;
+    padding: 15px 50px 15px 10px;
+    border: solid 1px #D4E9F9;
+    border-radius: 5px;
+}
+.form__btn{
+    background-color: #4E9DD3;
+    padding: 15px 50px 15px 10px;
+    border: solid 1px #4E9DD3;
+    border-radius: 5px;
+    color: white;
+}
+.form__btn:hover{
+    cursor: pointer;
+    color: white;
+    background-color: #4E9DD3;
 }
 .choiceBox {
     display: flex;

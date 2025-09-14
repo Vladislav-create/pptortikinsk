@@ -13,30 +13,36 @@ export function CostCalculationComponent() {
     }
 
     const onButtonClick = (e) => {
-        let id = nanoid()
+        let id = nanoid();
+        const elemName = document.getElementById('name').value;
+        const elemPhone = document.getElementById('phone').value;
+        const elemDescription = document.getElementById('description').value;
         e.preventDefault();
         console.log('hi');
-        fetch('/api/bricks', {
+        fetch('/', {
             method: 'POST',
-            body: JSON.stringify({ id }),
+            body: JSON.stringify({ id, elemName, elemPhone, elemDescription}),
             headers: {
                 'Content-type': 'application/json'
             }
         })
+        console.log(elemName);
+        console.log(elemPhone);
+        console.log(elemDescription);
     }
 
     useEffect(getAllDataFromDbUsers, []);
 
     return (
         <div className={styles.contentBox}>
-            <h1>Рассчитать стоимость торта</h1>
-            <br></br>
+            {/* <h1>Рассчитать стоимость торта</h1>
+            <br></br> */}
             {/* 
                 1) торт
                 2) вес
                 3) декор
             */}
-            <div className={styles.choiceBox}>
+            {/* <div className={styles.choiceBox}>
                 <section className={styles.typesOfCakes}>
                     <h3>Торт</h3>
                     <div className={styles.typesOfCakes__radioButton}>
@@ -88,14 +94,14 @@ export function CostCalculationComponent() {
                 </section>
             </div>
 
-            <br></br>
-            <h1>Заказать торт</h1>
+            <br></br> */}
+            <h1 className={styles.title}>Заказать торт</h1>
             <form className={styles.form}>
-                <input className={styles.form__name} placeholder="Укажите ваше имя"></input>
+                <input id="name" className={styles.form__name} placeholder="Укажите ваше имя"></input>
                 <br></br>
-                <input className={styles.form__phone} placeholder="Контактный номер телефона"></input>
+                <input id="phone" className={styles.form__phone} placeholder="Контактный номер телефона"></input>
                 <br></br>
-                <textarea className={styles.form__description} placeholder="Напишите, что вы ходите заказать, мы свяжемся с вами в течении дня"></textarea>
+                <textarea id="description" className={styles.form__description} placeholder="Напишите, что вы ходите заказать, мы свяжемся с вами в течении дня"></textarea>
                 <br></br>
                 <button className={styles.form__btn} onClick={onButtonClick}> Отправить заказ</button>
             </form>
