@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 import styles from './mainContent.module.css'
 import { useEffect, useState } from "react"
+import svgRub from '../../pictures/pictures-card/ruble.svg'
 import svgCatch from "../../pictures/pictures-header/Catch.svg";
 import {BrowserRouter, Routes, Route, Link, useParams} from "react-router-dom"
 
@@ -58,6 +59,8 @@ export function MainContentComp() {
                             <div className={styles.productCartBoxBy}>
                                 <div className={styles.productCartPriceBy}>
                                         <p className={styles.productCartPrice}>{item.productPrice}</p>
+                                        <img className={styles.productCartRub} src={svgRub} alt="" />
+                                        <p>кг</p>
                                 </div>
                                 <button className={styles.productCartBy}><img src={ svgCatch } className={styles.productBtnBy} ></img></button>
                             </div>

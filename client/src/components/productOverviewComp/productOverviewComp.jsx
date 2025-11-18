@@ -2,6 +2,7 @@ import {BrowserRouter, Routes, Route, Link, useLocation, useParams} from "react-
 import styles from './productOverview.module.css'
 import {HeaderComponent} from '../headerComp/headerComponent'
 import { useEffect, useState } from "react"
+import svgRub from '../../pictures/pictures-card/ruble.svg'
 
 export function ProductOverviewComp() {
     const location = useLocation();
@@ -25,7 +26,7 @@ export function ProductOverviewComp() {
     return (
         <section >
             <section className={`${styles.productOverviewBox} ${styles.center}`}>
-            <Link to="/">На главную</Link>
+            <Link className={styles.productBackToHomeBtn} to="/">На главную</Link>
                 <div className={styles.productTitleBox}>
                     <h1 className={styles.productTitle}>{product.productName}</h1>
                 </div>
@@ -52,9 +53,13 @@ export function ProductOverviewComp() {
                     </div>
                 </div>
                 <div className={styles.productDiscribeBox}>
-                    <h3>{product.productId}</h3>
+                    {/* <h3>{product.productId}</h3> */}
                     <h3>{product.productType}</h3>
-                    <h3>{product.productPrice}</h3>
+                    <div className={styles.productDiscribeBoxPriceBox}>
+                        <h3>{product.productPrice}</h3>
+                        <img className={styles.productDiscribeBoxImg} src = {svgRub}></img>
+                        <h3>кг</h3>
+                    </div>
                     <h3>{product.productCalories}</h3>
                     <h3>{product.productDiscription}</h3>
                 </div>

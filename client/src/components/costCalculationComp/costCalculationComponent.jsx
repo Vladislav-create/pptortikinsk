@@ -14,9 +14,9 @@ export function CostCalculationComponent() {
 
     const onButtonClick = (e) => {
         let id = nanoid();
-        const elemName = document.getElementById('name').value;
-        const elemPhone = document.getElementById('phone').value;
-        const elemDescription = document.getElementById('description').value;
+        let elemName = document.getElementById('name').value;
+        let elemPhone = document.getElementById('phone').value;
+        let elemDescription = document.getElementById('description').value;
         e.preventDefault();
         console.log('hi');
         fetch('/', {
@@ -26,6 +26,13 @@ export function CostCalculationComponent() {
                 'Content-type': 'application/json'
             }
         })
+
+        document.getElementById('name').value = '';
+        document.getElementById('phone').value = '';
+        document.getElementById('description').value = '';
+
+        
+
         console.log(elemName);
         console.log(elemPhone);
         console.log(elemDescription);
